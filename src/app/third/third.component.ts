@@ -36,7 +36,11 @@ export class ThirdComponent implements OnInit {
   }
 
   getArrForObsPush(): Observable<any[]> {
-    return of(this.observablePush);
+    //return of(this.observablePush);
+    return Observable.create(observer => {
+      observer.next(this.observablePush);
+    }
+    );
   }
   //#endregion for Observeble
 
@@ -45,7 +49,7 @@ export class ThirdComponent implements OnInit {
   promiseShow: any = [];
   promiseMessage: string;
 
-  
+
   promiseFunction() {
     this.getArrPromForPush().then(data => {
       this.promiseShow = data;

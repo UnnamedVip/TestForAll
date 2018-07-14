@@ -40,7 +40,6 @@ export class ThirdComponent implements OnInit {
   }
   //#endregion for Observeble
 
-
   //#region for Promise
   promisePush: any = [];
   promiseShow: any = [];

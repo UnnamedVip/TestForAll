@@ -1,0 +1,44 @@
+<!-- test plugin -->
+<div class="mat-dialog-content">
+    <label for="certlist">Сертификат</label>
+    <select class="form-control" id="certlist" size="4"></select>
+    <div class="cert-info">
+      <p>Информация о выбранном сертификате:</p>
+      <div id="certlistsubject"></div>
+      <div id="certlistissuer"></div>
+      <div id="certlistfrom"></div>
+      <div id="certlisttill"></div>
+      <div id="certlistalgorithm"></div>
+      <div id="certlistprovname"></div>
+      <div id="certliststatus"></div>
+      <div id="certlistlocation"></div>
+    </div>
+</div>
+<div>
+  <p>Загрузить XLS</p>
+  
+  <input id="uploadFile"
+         type="file"
+         accept="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet"
+         class="form-control"
+         (change)="handleFileInput($event.target.files)">
+</div>
+<div>
+  <button [disabled]="uploading"
+          class="dialog-btn-cancel"
+          (click)="uploadFile()">{{uploading ? 'Загрузка...' : 'Загрузить'}}
+  </button>
+</div>
+
+<!-- endTest plugin -->
+
+
+
+
+
+
+<!-- <h3>Use ag-Grid Library</h3>
+
+<ag-grid-angular *ngIf = "false"  #agGrid style="width: 100%; height: 250px;" 
+                  class="ag-theme-balham"
+                  [gridOptions]="gridOptions"></ag-grid-angular> -->

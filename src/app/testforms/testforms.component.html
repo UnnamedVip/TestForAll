@@ -1,0 +1,12 @@
+<form #explForm="ngForm">
+    <legend>ngModel</legend>
+    <app-counter name="ngModelCount" [(ngModel)]="ngModelCount"></app-counter>
+    <p>Count: {{ngModelCount}}</p>
+  </form>
+  
+  <form [formGroup]="form">
+    <legend>Reactive Forms</legend>
+    <app-counter formControlName="count"></app-counter>
+    <button (click)="plus2()">this + </button>
+    <p>form value: {{form.value|json}}</p>
+  </form>

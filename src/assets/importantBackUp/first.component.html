@@ -25,7 +25,7 @@
 </div>
 <div class="mat-dialog-content"> 
 <div>
-  <label>Загрузить XLS</label>
+  <p>Загрузить XLS</p>
   
   <input type="file"
          [disabled]="!selectedCertificateFromListGet"
@@ -33,15 +33,17 @@
          (change)="handleFileInput($event.target.files)">
 </div>
 <div>
-      <button class="btn"
-              *ngIf="fileToUpload != null"
-              [disabled]="fileToUpload == null"
-              (click)="uploadFile()">{{overGet ? 'Подпись сформирована' : 'Подписать и загрузить'}}
-      </button>
+  <button [disabled]="fileToUpload == null"
+          (click)="uploadFile()">{{overGet ? 'Подпись сформирована' : 'Подписать и загрузить'}}
+  </button>
 </div>
 </div>
+<!-- endTest plugin -->
 
-<!-- endTest plugin-->
+
+
+
+
 
 <!-- <h3>Use ag-Grid Library</h3>
 

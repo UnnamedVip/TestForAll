@@ -1,0 +1,32 @@
+[
+        {
+            "name":"Mike",
+            "age": 30,
+            "country": "RUS",
+            "telephoneNumber": 2264785
+        },
+        {
+            "name":"John",
+            "age": 25,
+            "country": "USA",
+            "telephoneNumber": 3332225566
+        },
+        {
+            "name":"Luci",
+            "age": 18,
+            "country": "GER",
+            "telephoneNumber": 669954
+        },
+        {
+            "name":"NikolKidman",
+            "age": 45,
+            "country": "Kanada",
+            "telephoneNumber": 11454885
+        },
+        {
+            "name":"Ganvanci",
+            "age": 60,
+            "country": "CHI",
+            "telephoneNumber": 8887775545
+        }        
+]

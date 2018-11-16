@@ -32,16 +32,15 @@ export class SecondComponent implements OnInit {
   checkNameCompany:boolean=false;
 
   checkcard(data) {
-    //let regVar =  /^[А-Я]{1}[а-я]{1,14}( [|А-Яа-я]{1})?([а-я]{0,14})?( [А-Яа-я]{1})?([а-я]{1,14})?$/;
     let regVar = /(^([A-Z]{1}[a-z]+(\s[A-Z]{1}[a-z]+$|$)))|(^([А-я]{1}[а-я]+(\s[А-я]{1}[а-я]+$|$)))/;
 
     if (regVar.test(data.companyName)) {
       this.checkNameCompany = true;
-      console.log(true);
+      console.log(this.checkNameCompany);
     }
     else {
       this.checkNameCompany = false;
-      console.log(false);
+      console.log(this.checkNameCompany);
     }
   }
 

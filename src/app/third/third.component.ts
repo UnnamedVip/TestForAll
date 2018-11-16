@@ -20,12 +20,12 @@ export class ThirdComponent implements OnInit {
   observableShow: any = [];
   observableMessage: string;
 
+
   observableFunction() {
     this.getArrForObsPush().subscribe(data => { this.observableShow = data; });
   }
 
   setNewValue(val: string) {
-
     this.observablePush.push(val);
     this.observableMessage = '';
   }
@@ -36,12 +36,12 @@ export class ThirdComponent implements OnInit {
   }
 
   getArrForObsPush(): Observable<any[]> {
-    //return of(this.observablePush);
     return Observable.create(observer => {
       observer.next(this.observablePush);
     }
     );
   }
+
   //#endregion for Observeble
 
   //#region for Promise
@@ -67,10 +67,10 @@ export class ThirdComponent implements OnInit {
   }
 
   getArrPromForPush() {
-    let promise = new Promise(resolve => {
-      resolve(this.promisePush);
-    });
-    return promise;
+      let promise = new Promise((resolve) => {
+        resolve(this.promisePush);
+      });
+      return promise;
   }
 
   //#endregion for Promise

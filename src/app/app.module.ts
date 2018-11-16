@@ -7,21 +7,32 @@ import { AppComponent } from './app.component';
 import { FirstComponent } from './first/first.component';
 import { SecondComponent } from './second/second.component';
 import { ThirdComponent } from './third/third.component';
+import { TestformsComponent } from './testforms/testforms.component';
+import { CounterComponent } from './shared/counter/counter.component';
+import { GetjsondatafromfileService } from './services/getjsondatafromfile.service';
+import { HttpClientModule } from '@angular/common/http';
+import {AgGridModule} from "ag-grid-angular/main";
+import { DatePipe } from '@angular/common';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponent,
     SecondComponent,
-    ThirdComponent
+    ThirdComponent,
+    TestformsComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    AgGridModule.withComponents([])
   ],
-  providers: [],
+  providers: [GetjsondatafromfileService,
+    DatePipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
